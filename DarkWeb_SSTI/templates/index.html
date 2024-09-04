@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Market</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Dark Market</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="login-btn" id="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-banner">
+                <h2>Welcome to Dark Market</h2>
+                <p>Your one-stop destination for all your needs.</p>
+                <a href="#products" class="shop-now-btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Featured Products</h2>
+            <div class="search-form">
+                <input type="text" id="search-input" placeholder="Search products..." onkeyup="search()">
+            </div>
+            <div class="product-grid" id="product-grid">
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/6-200x200.jpg') }}" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>A high-quality product that meets all your needs.</p>
+                    <p>Price: $100</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/27-200x200.PNG') }}" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>Premium item with exceptional features.</p>
+                    <p>Price: $200</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/38-200x200.jpg') }}" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>Top-notch quality at an unbeatable price.</p>
+                    <p>Price: $300</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/11-200x200.jpg') }}" alt="Product 4">
+                    <h3>Product 4</h3>
+                    <p>High demand product with great reviews.</p>
+                    <p>Price: $120</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/109-200x200.png') }}" alt="Product 5">
+                    <h3>Product 5</h3>
+                    <p>Popular item among users.</p>
+                    <p>Price: $150</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/69-200x200.jpg') }}" alt="Product 6">
+                    <h3>Product 6</h3>
+                    <p>Exclusive product available only here.</p>
+                    <p>Price: $250</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/58-200x200.jpg') }}" alt="Product 7">
+                    <h3>Product 7</h3>
+                    <p>Limited stock with high quality.</p>
+                    <p>Price: $180</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/111-200x200.png') }}" alt="Product 8">
+                    <h3>Product 8</h3>
+                    <p>Newest addition to our market.</p>
+                    <p>Price: $220</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/114-200x200.png') }}" alt="Product 9">
+                    <h3>Product 9</h3>
+                    <p>Best seller with excellent reviews.</p>
+                    <p>Price: $280</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories">
+            <h2>Product Categories</h2>
+            <div class="category-grid">
+                <div class="category">
+                    <img src="{{ url_for('static', filename='images/credits.jpg') }}" alt="Category 1">
+                    <h3>Stolen Credit Cards</h3>
+                    <p>Browse through a variety of stolen credit card details for sale, including card numbers,
+                        expiration dates, and security codes, ready for unauthorized transactions and fraud.</p>
+                    <a href="products.html?category=category1" class="view-btn">View Products</a>
+                </div>
+                <div class="category">
+                    <img src="{{ url_for('static', filename='images/drugs2.jpg') }}" alt="Category 2">
+                    <h3>Purchase Illicit Drugs</h3>
+                    <p>Browse a wide range of illegal drugs and controlled substances available for purchase with
+                        guaranteed privacy and discreet shipping.</p>
+                    <a href="products.html?category=category2" class="view-btn">View Products</a>
+                </div>
+                <div class="category">
+                    <img src="{{ url_for('static', filename='images/guns.jpg') }}" alt="Category 3">
+                    <h3>Buy Black Market Firearms</h3>
+                    <p>Explore a variety of unregistered guns, ammunition, and weaponry available for purchase with no
+                        background checks.</p>
+                    <a href="products.html?category=category3" class="view-btn">View Products</a>
+                </div>
+                <div class="category">
+                    <img src="{{ url_for('static', filename='images/ransomeware.jpg') }}" alt="Category 4">
+                    <h3>Ransomware Kits & Services</h3>
+                    <p> Purchase ransomware-as-a-service (RaaS) offerings and DIY ransomware kits for targeting systems
+                        and demanding cryptocurrency payments.</p>
+                    <a href="products.html?category=category4" class="view-btn">View Products</a>
+                </div>
+                <div class="category">
+                    <img src="{{ url_for('static', filename='images/data.jpg') }}" alt="Category 5">
+                    <h3> Purchase Data Breach Dumps</h3>
+                    <p>Buy databases from major data breaches containing sensitive personal information and login
+                        credentials.</p>
+                    <a href="products.html?category=category5" class="view-btn">View Products</a>
+                </div>
+                <div class="category">
+                    <img src="{{ url_for('static', filename='images/social.jpg') }}" alt="Category 6">
+                    <h3>Buy Hacked Social Accounts</h3>
+                    <p>Discover a selection of compromised social media accounts for sale, offering access to personal
+                        profiles, private messages, and other sensitive data.</p>
+                    <a href="products.html?category=category6" class="view-btn">View Products</a>
+                </div>
+                <div class="category">
+                    <img src="{{ url_for('static', filename='images/personal.jpg') }}" alt="Category 7">
+                    <h3>Purchase Confidential Leaks</h3>
+                    <p>Explore a range of leaked confidential documents and private data, including emails, personal
+                        records, and corporate secrets available for purchase.</p>
+                    <a href="products.html?category=category7" class="view-btn">View Products</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="popup-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Message Status</h2>
+            <p id="popup-message"></p>
+            <p id="thank-you-message" style="display: none;">Thank you for contacting us. We will reach you soon.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for form submission and popup -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle form submission
+            const contactForm = document.getElementById('contact-form');
+            const popupModal = document.getElementById('popup-modal');
+            const popupMessage = document.getElementById('popup-message');
+            const thankYouMessage = document.getElementById('thank-you-message');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(contactForm);
+
+                    fetch('{{ url_for("submit") }}', {
+                        method: 'POST',
+                        body: formData
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+
+                            if (data.message.includes('{{') || data.message.includes('}}')) {
+                                popupMessage.innerHTML = `Received message: ${data.message} <br> Evaluated message: <strong>${data.message}</strong>`;
+                            } else {
+                                popupMessage.innerHTML = `We have received your message. <br> ${data.message}`;
+                            }
+
+
+                            thankYouMessage.style.display = 'block';
+
+
+                            popupModal.style.display = 'block';
+                        })
+                        .catch(error => console.error('Error:', error));
+                });
+            }
+        });
+
+
+        function closePopup() {
+            const popupModal = document.getElementById('popup-modal');
+            popupModal.style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>

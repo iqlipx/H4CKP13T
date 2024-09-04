@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Result</title>
+</head>
+<body>
+    <h1>Submission Result</h1>
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    
+    <!-- Inject evaluated message directly into the message field -->
+    <p>Message: {{ evaluated_message | safe }}</p>
+</body>
+</html>
