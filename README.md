@@ -24,8 +24,5 @@ For permissions or inquiries, you can reach me at:
 
 - [Instagram](https://www.instagram.com/iqlip7/) 📸
 - [LinkedIn](https://www.linkedin.com/in/iqlip/) 💼
-- [GitHub](https://github.com/iqlipx) 💻
-- [TryHackMe](https://tryhackme.com/p/iqlip) 🔍
-- [X (formerly Twitter)](https://x.com/Iqlip7) 🐦
 
 Thank you for respecting these guidelines and supporting creative work in the cybersecurity community! 🎉
